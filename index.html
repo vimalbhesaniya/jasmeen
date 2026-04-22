@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Subscription App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOGIN PAGE -->
+  <section id="loginView" class="view page-center">
+    <div class="auth-box">
+      <h2>Login</h2>
+      <form id="loginForm" novalidate>
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" maxlength="254" autocomplete="email" inputmode="email" required>
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" minlength="8" maxlength="64" autocomplete="current-password" required>
+        <button type="submit">Login</button>
+      </form>
+      <p id="loginMessage" class="message"></p>
+      <p class="hint">No account? <a href="#" id="goRegister">Register</a></p>
+    </div>
+  </section>
+
+  <!-- REGISTER PAGE -->
+  <section id="registerView" class="view hidden page-center">
+    <div class="auth-box">
+      <h2>Register</h2>
+      <form id="registerForm" novalidate>
+        <label for="registerEmail">Email</label>
+        <input type="email" id="registerEmail" maxlength="254" autocomplete="email" inputmode="email" required>
+        <label for="registerUsername">Username</label>
+        <input type="text" id="registerUsername" minlength="3" maxlength="25" pattern="[A-Za-z0-9_ ]{3,25}" title="3-25 chars: letters, numbers, spaces, underscore" autocomplete="username" required>
+        <label for="registerPassword">Password</label>
+        <input type="password" id="registerPassword" minlength="8" maxlength="64" pattern="^(?=.*[A-Za-z])(?=.*\d).{8,64}$" title="8-64 chars with at least one letter and one number" autocomplete="new-password" required>
+        <button type="submit">Register</button>
+      </form>
+      <p id="registerMessage" class="message"></p>
+      <p class="hint">Already have an account? <a href="#" id="goLogin">Login</a></p>
+    </div>
+  </section>
+
+  <!-- MAIN PAGE -->
+  <section id="mainView" class="view hidden">
+    <div class="topbar">
+      <h2>Main Page</h2>
+      <p id="welcomeText"></p>
+      <a href="#" id="logoutLink">Logout</a>
+    </div>
+
+    <div class="main-grid">
+      <!-- User Area -->
+      <div class="area" id="userArea">
+        <h3>User Area</h3>
+        <p class="small">Logged in user:</p>
+        <p id="userNameText"></p>
+      </div>
+
+      <!-- Subscription Area -->
+      <div class="area" id="subscriptionArea">
+        <h3>Subscription Area</h3>
+        <ul id="subscriptionList" class="list"></ul>
+        <p id="subscriptionEmpty" class="small">No subscriptions yet.</p>
+      </div>
+
+      <!-- Query Area -->
+      <div class="area" id="queryArea">
+        <h3>Query Area</h3>
+        <form id="queryForm" novalidate>
+          <div class="query-fields">
+            <div>
+              <label for="queryTitle">Title</label>
+              <input type="text" id="queryTitle" placeholder="Song title" maxlength="100">
+            </div>
+            <div>
+              <label for="queryYear">Year</label>
+              <input type="number" id="queryYear" placeholder="Year" min="1900" max="2099" step="1">
+            </div>
+            <div>
+              <label for="queryArtist">Artist</label>
+              <input type="text" id="queryArtist" placeholder="Artist" maxlength="80">
+            </div>
+            <div>
+              <label for="queryAlbum">Album</label>
+              <input type="text" id="queryAlbum" placeholder="Album" maxlength="100">
+            </div>
+          </div>
+          <button type="submit">Query</button>
+        </form>
+        <p id="queryMessage" class="message"></p>
+        <ul id="queryResults" class="list"></ul>
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

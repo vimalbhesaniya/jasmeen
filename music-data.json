@@ -1,0 +1,72 @@
+{
+  "songs": [
+    {
+      "id": 1,
+      "title": "Love Story",
+      "year": 2008,
+      "artist": "Taylor Swift",
+      "album": "Fearless",
+      "image": "https://picsum.photos/seed/lovestory/120/80"
+    },
+    {
+      "id": 2,
+      "title": "You Belong With Me",
+      "year": 2008,
+      "artist": "Taylor Swift",
+      "album": "Fearless",
+      "image": "https://picsum.photos/seed/youbelong/120/80"
+    },
+    {
+      "id": 3,
+      "title": "Margaritaville",
+      "year": 1977,
+      "artist": "Jimmy Buffett",
+      "album": "Changes in Latitudes",
+      "image": "https://picsum.photos/seed/margarita/120/80"
+    },
+    {
+      "id": 4,
+      "title": "Come Monday",
+      "year": 1974,
+      "artist": "Jimmy Buffett",
+      "album": "Living and Dying in 3/4 Time",
+      "image": "https://picsum.photos/seed/comemonday/120/80"
+    },
+    {
+      "id": 5,
+      "title": "Viva La Vida",
+      "year": 2008,
+      "artist": "Coldplay",
+      "album": "Viva La Vida",
+      "image": "https://picsum.photos/seed/viva/120/80"
+    },
+    {
+      "id": 6,
+      "title": "Yellow",
+      "year": 2000,
+      "artist": "Coldplay",
+      "album": "Parachutes",
+      "image": "https://picsum.photos/seed/yellow/120/80"
+    }
+  ],
+  "dummySubscriptionsByEmail": {
+    "demo@musicapp.com": [
+      {
+        "id": 1,
+        "title": "Love Story",
+        "year": 2008,
+        "artist": "Taylor Swift",
+        "album": "Fearless",
+        "image": "https://picsum.photos/seed/lovestory/120/80"
+      },
+      {
+        "id": 3,
+        "title": "Margaritaville",
+        "year": 1977,
+        "artist": "Jimmy Buffett",
+        "album": "Changes in Latitudes",
+        "image": "https://picsum.photos/seed/margarita/120/80"
+      }
+    ]
+  }
+}

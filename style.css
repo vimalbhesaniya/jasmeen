@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f4f8;
+  color: #1f2937;
+  min-height: 100vh;
+}
+
+/* ---- Auth pages (Login / Register) ---- */
+.page-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.auth-box {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 32px 28px;
+}
+
+.auth-box h2 {
+  margin-bottom: 18px;
+  font-size: 1.5rem;
+}
+
+.view.hidden {
+  display: none !important;
+}
+
+/* ---- Labels & Inputs ---- */
+label {
+  display: block;
+  margin: 14px 0 5px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cfd6e4;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+input:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: -1px;
+}
+
+/* ---- Buttons ---- */
+button {
+  margin-top: 16px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button.danger {
+  background: #dc2626;
+}
+
+button.danger:hover {
+  background: #b91c1c;
+}
+
+/* ---- Messages ---- */
+.message {
+  color: #b91c1c;
+  min-height: 20px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.hint {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.hint a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.small {
+  color: #4b5563;
+  font-size: 0.85rem;
+}
+
+/* ---- Top Bar ---- */
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 24px;
+  background: #fff;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.topbar h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.topbar p {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.topbar a {
+  background: #dc2626;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.topbar a:hover {
+  background: #b91c1c;
+}
+
+/* ---- Main Grid: 3 areas fill all remaining space ---- */
+#mainView {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  min-height: 0;
+}
+
+.area {
+  padding: 20px 24px;
+  border-right: 1px solid #d1d5db;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.area:last-child {
+  border-right: none;
+}
+
+.area h3 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+#userNameText {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-top: 6px;
+}
+
+/* ---- Lists (subscriptions & query results) ---- */
+.list {
+  list-style: none;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.list li {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #fafbfc;
+}
+
+.list .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.list .row img {
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* ---- Query form fields side by side ---- */
+.query-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 14px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .area {
+    border-right: none;
+    border-bottom: 1px solid #d1d5db;
+  }
+
+  #mainView {
+    height: auto;
+    min-height: 100vh;
+  }
+}
